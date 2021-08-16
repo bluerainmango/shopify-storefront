@@ -55,8 +55,9 @@ class ShopProvider extends Component {
 
   // Fetch product with handle
   fetchProductWithHandle = async (handle) => {
-    const product = client.product.fetchByHandle(handle);
+    const product = await client.product.fetchByHandle(handle);
     this.setState({ product });
+    // console.log("😮 product:", this.state.product);
   };
 
   closeCart = () => {};
